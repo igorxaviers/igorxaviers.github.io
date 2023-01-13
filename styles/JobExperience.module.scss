@@ -1,0 +1,18 @@
+@import './colors.module.scss';
+
+
+
+.experience{
+    @apply ml-14;
+    ul li{
+        @apply relative pl-8;
+        &::before{
+            content: "▹";
+            left: 0;
+            position: absolute;
+            color: $primary-color;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

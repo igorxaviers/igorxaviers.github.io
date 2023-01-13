@@ -1,0 +1,80 @@
+@import './colors.module.scss';
+
+.box{
+    @apply relative rounded-2xl py-20 overflow-hidden z-10;
+    background: $background-color;
+    &::before{
+        content: '';
+        position: absolute;
+        left: -6em;
+        bottom: -8em;
+        background: $primary-color;
+        opacity: 0.15;
+        z-index: 0;
+        width: 60%;
+        height: 60%;
+        border-radius: 5em;
+        filter: blur(15em);
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        right: -16em;
+        top: -12em;
+        background: $primary-color;
+        opacity: 0.15;
+        z-index: 0;
+        width: 60%;
+        height: 60%;
+        border-radius: 5em;
+        filter: blur(15em);
+    }
+}
+
+.technology{
+    @apply rounded-lg py-3 px-6 w-max flex items-center justify-center ;
+    border: 1px solid transparentize($primary-color, 0.9);
+    z-index: 2;
+    background-color: transparentize($background-color, $amount: 0.2);
+    cursor: pointer;
+    transition: 250ms;
+    &:hover{
+        transform: scale(1.04);
+        box-shadow: $primary-color 0px 5px 30px -20px;
+        p{
+            @apply text-primary
+        }
+    }
+    p{
+        @apply ml-3 mt-0 text-base text-white text-secondary;
+    }
+}
+
+.noise{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: url('/noise.png');
+    z-index: 1;
+    opacity: 0.1;
+}
+
+.triangle{
+    height: fit-content;
+    width: fit-content;
+    right: -15em;
+    position: absolute;
+    top: 0;
+    z-index: 11;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

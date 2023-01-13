@@ -1,0 +1,89 @@
+@import './colors.module.scss';
+
+
+.squareImg{
+    position: absolute;
+    z-index: 3;
+    top: -10%;
+    left: 13%;
+    border-radius: 16px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.308);
+}
+
+.imgBox{
+    position: relative;
+    height: 290px;
+    width: 200px;
+}
+
+.img{
+    filter: grayscale(100%);
+    position: relative;
+    object-fit: cover;
+    border-radius: 14px;
+    z-index: 2;
+}
+
+.imgGlass{
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    height: 230px;
+    width: 150px;
+    opacity: 0.5;
+    z-index: 1;
+    filter: blur(30px);
+}
+
+.xBox{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.x{
+    -webkit-text-stroke: 0.5px $primary-color;
+    color: transparent;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.delay3{animation-delay: -4s !important; }
+.delay7{animation-delay: -8s !important;}
+.delay11{animation-delay: -12s !important;}
+.delay15{animation-delay: -12s !important;}
+.animate{animation: animate-forms 16s cubic-bezier(0, 0, 0, 0) infinite;}
+
+
+@keyframes animate-forms{
+    0%{
+        transform: rotate(0deg);
+        top: -10%;
+        left: -10%;
+    }
+    25%{
+        transform: rotate(360deg);
+        top: -10%;
+        left: 90%;
+    }
+    50%{
+        transform: rotate(900deg);
+        left: 90%;
+        top: 90%;
+    }
+    75%{
+        transform: rotate(1280deg);
+        top: 90%;
+        left: -10%;
+    }
+    100%{
+        top: -10%;
+        left: -10%;
+        transform: rotate(1800deg);
+    }
+}
+
