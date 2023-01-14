@@ -28,16 +28,16 @@ export default function Navbar() {
             <div className="md:px-20 mx-auto">
                 <div className="flex justify-between">
                     <Logo></Logo>
-                    <div className="flex space-x-4 items-center">
+                    <div className="flex space-x-3 items-center">
                         <AnchorLink className={styles.link} href='#about'>sobre</AnchorLink>
                         <AnchorLink className={styles.link} href='#knowlodge'>conhecimentos</AnchorLink>
                         <AnchorLink className={styles.link} href='#project'>projetos</AnchorLink>
                         <AnchorLink className={styles.link} href='#experience'>experiências</AnchorLink>
                         <AnchorLink className={styles.link} href='#contact'>contato</AnchorLink>
-                        <div className={`${styles.curriculum} flex items-center`} href='/about'>
+                        <a className={`${styles.curriculum} flex items-center`} href="/curriculo.pdf" target="_blank">
                             <Document></Document>
                             <p>currículo</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

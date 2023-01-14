@@ -2,14 +2,42 @@
 import Experience from "./icons/experience";
 import styles from "../../../styles/JobExperience.module.scss";
 import experience from "../../experience.json"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function JobExperience() {
+    const [activeTab, setactiveTab] = useState(0);
 
     useEffect(() => {
-        console.log(experience);
     });
+
+    const tabs = () => (
+        experience.map((item, index) => (
+            <li
+            className={activeTab === index ? `${styles.tab} px-5 mt-1 py-3 rounded-md text-primary` : "px-5 mt-1 py-3  rounded-md cursor-pointer text-secondary"}
+            key={index}
+            onClick={() => setactiveTab(index)}
+            >{item.name}</li>
+        ))
+    )
+
+    const tabItens = () => (
+        <>
+            <h3 className="text-xl font-semibold mb-1">
+                {experience[activeTab].name} 
+                <span className="ml-2 text-tertiary">@{experience[activeTab].title}</span>
+            </h3>
+            <span className="text-sm text-secondary">{experience[activeTab].period}</span>
+            <ul className="mt-10">
+                {
+                    experience[activeTab].responsibilities.map((item, index) => (
+                        <li key={index} className="flex items-center mt-5">{item}</li>
+                    ))
+                }
+            </ul>
+        </>
+    )
+
 
     return (
         <section className="mt-64 mx-auto md:max-w-6xl px-4 sm:px-6 lg:px-8 relative">
@@ -25,36 +53,11 @@ export default function JobExperience() {
                 <div className="flex">
                     <div>
                         <ul className="border border-transparent border-x-2 pl-2 border-l-gray-500 min-w-max">
-                            {
-                                experience.map((item, index) => (
-                                    <li 
-                                    className="px-5 mt-1 py-3 bg-slate-900 rounded-md" 
-                                    key={index}
-
-                                    >
-                                        {item.name}
-                                    </li>
-                                ))
-                            }
+                            {tabs()}
                         </ul>
                     </div>
                     <div className={styles.experience}>
-                        <h3 className="text-xl font-semibold mb-1">Estágio <span className="text-tertiary">@VCOM Tecnologia</span></h3>
-                        <span className="text-sm text-secondary">janeiro - dezembro 2022</span>
-
-                        <ul className="mt-10">
-                        {
-                            experience.map((item, index) => {
-                                let responsabilities = item.responsibilities;
-                                return(
-                                    responsabilities.map((responsability, index) => (
-                                        <li key={index}>{responsability}</li>
-                                )))
-                            })
-                        }   
-                            <li>Desenvolvimento de sites e sistemas web asddddddd asdasdas asdasdasdasdas asd asd asdasdadasdas asdasda</li>
-                        </ul>
-
+                        {tabItens()}
                     </div>
                 </div>
             </div>

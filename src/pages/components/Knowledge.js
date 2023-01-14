@@ -21,12 +21,12 @@ export default function Knowledge(){
         <section className="mt-64 mx-auto md:max-w-6xl px-4 sm:px-6 lg:px-8 relative">
             <div className={styles.box}>
                 <div className="grid grid-cols-4 items-center relative z-10">
-                    <div className="line w-full left-0 relative invert-side"></div>
+                    <div className="line w-full left-0 relative"></div>
                     <div className="flex items-center justify-center col-span-2">
                         <Computer/>
                         <h2 className="ml-4 text-2xl font-semibold">com o que já trabalhei</h2>
                     </div>
-                    <div className="line w-full"></div>
+                    <div className="line w-full invert-side"></div>
                 </div>
 
                 <p className="my-16 text-center text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dignissim tellus diam. Pellentesque aliquam turpis</p>
@@ -83,7 +83,7 @@ export default function Knowledge(){
                         </div>
                     </div>
                 </div>
-                <div className={styles.noise}></div>
+                <div className="noise"></div>
             </div>
             <div className={styles.triangle}>
                 <Triangle/>

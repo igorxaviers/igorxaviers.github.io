@@ -1,6 +1,7 @@
 import styles from "../../../styles/Header.module.scss";
 import { gsap } from "gsap";
 import { useEffect } from "react";
+import Arrow from "./icons/arrow";
 
 export default function Header() {
     useEffect(() => {
@@ -39,7 +40,7 @@ export default function Header() {
                 Especializado em desenvolvimento de aplicações front end (ocasionalmente também criando designs) de qualidade, 
                 visando performace, modernas, responsivas, com um bom SEO e pensando na usabilidade das pessoas.
             </p>
-            <button className="button mt-10">Mais sobre mim</button>
+            <button className="button mt-10 flex items-center"><Arrow/> <span className="ml-3">Mais sobre mim</span></button>
             {/* <div className={styles.sphere}></div> */}
         </div>
     );

@@ -16,3 +16,20 @@
         }
     }
 }
+
+.tab{
+    position: relative;
+    background-color: $transparency-color;
+    &::before{
+        content: "";
+        position: absolute;
+        left: -12px;
+        top: 0;
+        width: 5px;
+        height: 100%;
+        background-color: $primary-color;
+        box-shadow: 0 0 40px 0 $primary-color;
+        border-radius: 3px;
+    }
+
+}

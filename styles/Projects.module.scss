@@ -1,0 +1,53 @@
+@import './colors.module.scss';
+
+.project{
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        transform: scale(1.02) translateY(-0.5em);
+        &::after{
+            left: 2em;
+            filter: blur(10em);
+        }
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        right: auto;
+        left: -5em;
+        bottom: -5em;
+        background: $primary-color;
+        opacity: 0.3;
+        z-index: 0;
+        width: 60%;
+        height: 60%;
+        border-radius: 5em;
+        transition: all 0.2s ease-in-out;
+        filter: blur(15em);
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        right: -5em;
+        top: -7em;
+        background-image: linear-gradient(320deg, transparentize($primary-color, 0.8), #0000 92%);
+        opacity: 0.15;
+        z-index: 0;
+        width: 20em;
+        height: 20em;
+        border-radius: 50%;
+    }
+
+    img{
+        @apply rounded-2xl;
+        position: relative;
+        display: block;
+        margin: 0 0 0 auto;
+        width: 70%;
+        height: 70%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 2;
+    }
+}

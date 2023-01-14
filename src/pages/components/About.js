@@ -24,16 +24,27 @@ export default function About() {
             </div>    
             <div className="mt-20 grid grid-flow-col grid-cols-3">
                 <div className="col-span-2">
-                    <p className="text-lg text-secondary">
-                        Olá, meu nome é Igor Xavier, tenho 23 anos e sou um desenvolvedor front-end.
+                    <p className=" text-secondary leading-relaxed">
+                        Meu nome é Igor Xavier e eu adoro desenvolver para a internet 👨🏽‍💻. Me apaixonei desde o meu primeiro contato com as 
+                        tecnologias web 🕸️ em 2017 e desde então venho sempre estudando coisas.
+                        Meus primeiros projetos foram com HTML e CSS puro criando e recriando sites existentes (como a página do Google 😄)
                     </p>
-                    <p className="mt-4 text-lg text-secondary">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dignissim tellus diam. Pellentesque aliquam 
-                        turpis vel commodo eleifend. Ut rhoncus ut ipsum eu tincidunt. Vestibulum ante ipsum primis in faucibus 
-                        orci luctus et ultrices posuere cubilia curae; Phasellus iaculis facilisis faucibus. Nunc varius iaculis tincidunt.
-
-                        Vestibulum ante ipsum primis in faucibus orci cubilia curae; Phasellus iaculis facilisis faucibus. Nunc varius iaculis tincidunt.
+                    <p className="mt-4 text-secondary leading-relaxed">
+                        Especializado em Front end, já atuei desde a
+                        prototipação, design até o desenvolvimento de aplicações simples e escaláveis, aplicando boas práticas
+                        de UI/UX e utilizando linguagens de programações modernas
                     </p>
+                    <p className="mt-4 text-secondary leading-relaxed mb-4">
+                        Atualmente estou aprofundando meus conhecimentos em:
+                    </p>
+                    <ul className={`${styles.topics} grid grid-cols-3 gap-3 text-sm text-left`}>
+                        <li>React</li>
+                        <li>Next.js</li>
+                        <li>Vue.js</li>
+                        <li>Node.js</li>
+                        <li>Typescript</li>
+                        <li>Testes automatizados</li>
+                    </ul>
                 </div>
                 <div>
                     <div className={`${styles.imgBox} mx-auto`}>

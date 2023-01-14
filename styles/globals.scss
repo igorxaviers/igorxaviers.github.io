@@ -51,7 +51,10 @@ a {
 }
 
 .button{
-  @apply bg-primary font-semibold py-2 px-6 rounded-md text-black;
+  @apply bg-primary font-semibold py-3 px-6 rounded-md text-black;
+  svg{
+    stroke: $background-color;
+  }
 }
 
 .section-title{
@@ -68,7 +71,7 @@ a {
 
 .line{
   height: 1px;
-  background-image: linear-gradient(to right, #0000 0%, $primary-color 66%);
+  background-image: linear-gradient(to right, #00FFB2 0%, #0000 66%);
   margin: 0 auto;
 }
 
@@ -76,3 +79,13 @@ a {
   transform: rotateY(180deg);
 }
 
+.noise{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: url('/noise.png');
+  z-index: 1;
+  opacity: 0.1;
+}

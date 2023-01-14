@@ -19,7 +19,7 @@
 }
 
 .img{
-    filter: grayscale(100%);
+    filter: grayscale(100%) contrast(1.1) brightness(0.6);
     position: relative;
     object-fit: cover;
     border-radius: 14px;
@@ -87,3 +87,16 @@
     }
 }
 
+.topics{
+    li{
+        @apply relative pl-4;
+        &::before{
+            content: "▹";
+            left: 0;
+            position: absolute;
+            color: $primary-color;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

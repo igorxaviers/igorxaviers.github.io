@@ -5,6 +5,9 @@ import About from './components/About'
 import { backgroundColor } from "../../styles/colors.module.scss"
 import Knowledge from './components/Knowledge'
 import JobExperience from './components/JobExperience'
+import Projects from './components/Projects'
+
+
 export default function Home() {
 
   const changeMode = () => {
@@ -12,6 +15,7 @@ export default function Home() {
     body.classList.toggle('dark')
     localStorage.getItem('color-theme') === 'light' ? localStorage.setItem('color-theme', 'light') : localStorage.setItem('color-theme', 'dark')
   }
+
 
   return (
     <>
@@ -25,6 +29,7 @@ export default function Home() {
       <About/>
       <Knowledge/>
       <JobExperience/>
+      <Projects/>
       <div className='mb-60'></div>
     </>
   )
