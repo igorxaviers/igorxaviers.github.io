@@ -45,18 +45,18 @@ export default function Home() {
             visando performace, modernas, responsivas, com um bom SEO & UI/UX."/>
 
             <meta property="og:type" content="website"/>
-            <meta property="og:url" content="https://metatags.io/"/>
+            <meta property="og:url" content="https://igorxavie.me/"/>
             <meta property="og:title" content="Igor Xavier - Desenvolvedor Front-end"/>
             <meta property="og:description" content="Especializado em desenvolvimento de aplicações front end (ocasionalmente também criando designs) de qualidade, 
             visando performace, modernas, responsivas, com um bom SEO & UI/UX."/>
-            <meta property="og:image" content="/meta.png"/>
+            <meta property="og:image" content="https://igorxavie.me/meta.png"/>
 
             <meta property="twitter:card" content="summary_large_image"/>
-            <meta property="twitter:url" content="https://metatags.io/"/>
+            <meta property="twitter:url" content="https://igorxavie.me/"/>
             <meta property="twitter:title" content="Igor Xavier - Desenvolvedor Front-end"/>
             <meta property="twitter:description" content="Especializado em desenvolvimento de aplicações front end (ocasionalmente também criando designs) de qualidade, 
             visando performace, modernas, responsivas, com um bom SEO & UI/UX."/>
-            <meta property="twitter:image" content="/meta.png"/>
+            <meta property="twitter:image" content="https://igorxavie.me/meta.png"/>
         </Head>
         <Navbar/>
         <main className="overflow-hidden pb-10 w-full relative">
