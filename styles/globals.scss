@@ -78,11 +78,14 @@ a {
 }
 
 .section-title{
-  @apply text-8xl font-extrabold;
+  font-size: 8em;
+  font-weight: 800;
   color: rgba(0,0,0,0);
-  background: -webkit-linear-gradient(transparentize($primary-color, $amount: 0.85) 15%, rgba(0,0,0,0) 95%);
+  opacity: 0.2;
+  background: -webkit-linear-gradient(transparentize($primary-color, $amount: 0.55) 15%, rgba(0,0,0,0) 95%);
   -webkit-background-clip: text;
   -webkit-text-stroke: 2px transparent;
+  // transform: translate(-800px, 0px);
   color: $background-color;
   bottom: -0.5em;
   position: relative;
@@ -105,6 +108,20 @@ a {
   top: 0;
   background-image: url('/noise.png');
   z-index: 1;
+  opacity: 0.1;
+}
+
+.bg{
+  top: -5em;
+  left: 0;
+  width: 100vw;
+  height: 95vh;
+  position: absolute;
+  background-image: url("https://i.giphy.com/media/A06UFEx8jxEwU/giphy.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(8px);
   opacity: 0.1;
 }
 

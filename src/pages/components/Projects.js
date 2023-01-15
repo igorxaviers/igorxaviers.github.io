@@ -1,16 +1,37 @@
-import Mouse from "./icons/mouse";
-import { useEffect, useState } from "react";
-import { Octokit } from "octokit";
+import { useEffect, useState, useRef } from "react";
 import styles from "../../../styles/Projects.module.scss";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Mouse from "./icons/mouse";
 import Github from "./icons/github";
 import Link from "./icons/link";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
-
+    const ref = useRef(null);
     const [projects, setProjects] = useState([]);
 
     useEffect (() => {
         callAPI();
+        const el = ref.current;
+        gsap.fromTo(
+            el, 
+            {x: '-200px', opacity: 0},
+            {
+                x: '0px', 
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 100%',
+                    end: 'bottom 50%',
+                    scrub: true,
+                    toggleAction: 'restart pause resume pause',
+                }
+            }
+        );
+
+    
+    
     },[]);
 
     const callAPI = async () => {
@@ -28,7 +49,7 @@ export default function Projects() {
 
     return (
         <section id="projects" className="mt-64 relative">
-            <h2 className="section-title">PROJETOS</h2>
+            <h2 className="section-title" ref={ref}>PROJETOS</h2>
 
 
             <div className="mt-20 mb-10 flex items-center">

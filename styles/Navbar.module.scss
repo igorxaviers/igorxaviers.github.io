@@ -46,17 +46,14 @@
 
 .bar{
     border-bottom: 1px solid $transparency-color;
-    background-color: transparentize($background-color, 0.2);
+    background-color: transparentize($background-color, 0.7);
     position: sticky;
     top: 0;
 }
 
 .curriculum{
-    @apply text-sm;
     background-color: transparent;
     color: $primary-text-color;
-    padding: 0.5em 1.5em;
-    border-radius: 0.5em;
     overflow: hidden;
     cursor: pointer;
     position: relative;
@@ -92,6 +89,24 @@
         }
     }
 }
+
+.mobile{
+    background-color: transparentize($background-color, 0.6);
+    width: 80vw;
+    height: 92vh;
+    position: fixed;
+    right: -100%;
+    top: 72px;
+    padding: 30px;
+    z-index: 30;
+    border-left: 1px solid $transparency-color;
+    transition: all 0.3s ease-in-out;
+    &.on{
+        right: 0;
+    }
+
+}
+
 
 .hamburguer{
     position: relative;

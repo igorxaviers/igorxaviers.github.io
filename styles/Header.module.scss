@@ -1,46 +1,23 @@
 @import './colors.module.scss';
 
 
-.introduction{
-    opacity: 0;
-}
-
-.name{
-    opacity: 0;
-}
-
-.function{
-    opacity: 0;
-}
-
-.description{
-
+.introduction, .name, .function, .description{
     opacity: 0;
 }
 
 .sphere{
     position: absolute;
     top: 5em;
-    right: -10em;
+    right: -30em;
     width: 20em;
     height: 12em;
     transform: rotate(155deg);
-    background-image: linear-gradient(170deg, $secondary-color, $primary-color 60%);
-    background-size: 200% 200%;
+    background: $primary-color;
     border-radius: 50%;
     z-index: 1;
     filter: blur(10em);
-    opacity: 0.9;
+    opacity: 0.2;
     animation: gradient 7s ease infinite;
-}
-
-@keyframes rotate{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
 }
 
 // gradient text
@@ -55,5 +32,39 @@
         background: -webkit-linear-gradient(95deg, #6100FF -88%, #00FFB2 102%);
         opacity: 0.4;
         border-radius: 2px;
+    }
+}
+
+.x{
+    position: absolute;
+    top: -0.5em;
+    right: -0.8em;
+    font-size: 30em;
+    -webkit-text-stroke: 0.5px $primary-color;
+    color: transparent;
+    font-weight: 800;
+    user-select: none;
+    animation: rotate 7s linear infinite;
+}
+
+// animation rotate
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .sphere{
+        right: -10em;
+    }
+    .x{
+        position: absolute;
+        top: -1.1em;
+        right: -0.1em;
+        font-size: 10em;
     }
 }

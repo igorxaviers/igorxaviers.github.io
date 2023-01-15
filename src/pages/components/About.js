@@ -1,20 +1,53 @@
+import { useEffect, useRef } from "react";
 import styles from "../../../styles/About.module.scss";
-import { gsap } from "gsap";
-import { useEffect, useRef, forwardRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import User from "./icons/user";
-import me from "/public/foto-perfil.jpg";
 import Image from 'next/image'
+import me from "/public/foto-perfil.jpg";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
     const ref = useRef(null);
 
     useEffect(() => {
+        const el = ref.current;
+        gsap.fromTo(
+            el, 
+            {x: '-200px', opacity: 0},
+            {
+                x: '0px', 
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 100%',
+                    end: 'bottom 50%',
+                    scrub: true,
+                    toggleAction: 'restart pause resume pause',
+                }
+            }
+        );
 
+        gsap.fromTo(
+            `.${styles.imgBox}`, 
+            {scale: 0.1, opacity: 0},
+            {
+                scale: 1,
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 150%',
+                    end: 'bottom 0%',
+                    scrub: true,
+                    toggleAction: 'restart pause resume pause',
+                }
+            }
+        );
     }, []);
 
     return ( 
         <section id="about" className="mt-64 relative">
-            <h2 className="section-title">SOBRE</h2>
+            <h2 className="section-title mt-60"  ref={ref}>SOBRE</h2>
 
 
             <div className="mt-20 flex items-center">

@@ -2,14 +2,49 @@
 import Experience from "./icons/experience";
 import styles from "../../../styles/JobExperience.module.scss";
 import experience from "../../experience.json"
-import { useEffect, useState } from "react";
-
+import { useEffect, useState, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function JobExperience() {
     const [activeTab, setactiveTab] = useState(0);
+    const ref = useRef(null);
+    const jobs = useRef(null);
 
     useEffect(() => {
-    });
+        const el = ref.current;
+        const elJobs = jobs.current;
+        gsap.fromTo(
+            el, 
+            {x: '400px', opacity: 0},
+            {
+                x: '0px', 
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 100%',
+                    end: 'bottom 50%',
+                    scrub: true,
+                    toggleAction: 'restart pause resume pause',
+                }
+            }
+        );
+        gsap.fromTo(
+            elJobs, 
+            {opacity: 0},
+            {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 50%',
+                    end: 'bottom 30%',
+                    scrub: true,
+                    toggleAction: 'restart pause resume pause',
+                }
+            }
+        );
+    }, []);
 
     const tabs = () => (
         experience.map((item, index) => (
@@ -42,7 +77,7 @@ export default function JobExperience() {
 
     return (
         <section id="experience" className="mt-64 relative">
-            <h2 className="section-title">EXPERIÊNCIAS</h2>
+            <h2 className="section-title" ref={ref}>EXPERIÊNCIAS</h2>
 
 
             <div className="mt-20 flex items-center">
@@ -54,7 +89,7 @@ export default function JobExperience() {
             </div>
 
 
-            <div className="md:mt-20 mt-10 mx-auto md:max-w-4xl max-w-max md:px-4 px-0 sm:px-6 lg:px-8 relative">
+            <div className="md:mt-20 mt-10 mx-auto md:max-w-4xl max-w-max md:px-4 px-0 sm:px-6 lg:px-8 relative" ref={jobs}>
                 <div className="md:flex block">
                     <div className="md:max-w-max max-w-full md:overflow-x-visible overflow-x-scroll md:overflow-y-visible overflow-y-hidden">
                         <ul className="border border-transparent border-x-2 pl-2 md:border-l-gray-500 md:border-b-0  border-b-gray-500 min-w-max md:block flex flex-row ">

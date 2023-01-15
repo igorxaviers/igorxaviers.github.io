@@ -39,37 +39,54 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className={`${styles.bar} md:py-5 py-3 px-6 md:px-0 backdrop-blur-sm z-20`}>
-            <div className="md:px-12 mx-auto">
-                <div className="flex justify-between">
-                    {/* <Logo></Logo> */}
-                    <Link href="/" className={`flex items-center ${styles.logo}`}>
-                        <span className="igor">Igor</span>
-                        <span className={`text-tertiary text-5xl font-bold ${styles.logoX}`}>X</span>
-                        <span className="xavier">avier</span>
-                    </Link>
-                    <div className="md:flex hidden space-x-3 items-center">
-                        <AnchorLink className={styles.link} href='#about'>sobre</AnchorLink>
-                        <AnchorLink className={styles.link} href='#knowlodge'>conhecimentos</AnchorLink>
-                        <AnchorLink className={styles.link} href='#experience'>experiências</AnchorLink>
-                        <AnchorLink className={styles.link} href='#projects'>projetos</AnchorLink>
-                        <AnchorLink className={styles.link} href='#contact'>contato</AnchorLink>
-                        <a className={`${styles.curriculum} flex items-center`} href="/curriculo.pdf" target="_blank" rel="noreferrer">
-                            <Document></Document>
-                            <p className="ml-3">currículo</p>
-                        </a>
+        <>
+            <nav className={`${styles.bar} md:py-5 py-3 px-6 md:px-0 backdrop-blur-md z-50`}>
+                <div className="md:px-12 mx-auto">
+                    <div className="flex justify-between relative  z-30">
+                        {/* <Logo></Logo> */}
+                        <Link href="/" className={`flex items-center ${styles.logo}`}>
+                            <span className="igor">Igor</span>
+                            <span className={`text-tertiary text-5xl font-bold ${styles.logoX}`}>X</span>
+                            <span className="xavier">avier</span>
+                        </Link>
+                        <div className="md:flex hidden space-x-3 items-center">
+                            <AnchorLink className={styles.link} href='#about'>sobre</AnchorLink>
+                            <AnchorLink className={styles.link} href='#knowlodge'>conhecimentos</AnchorLink>
+                            <AnchorLink className={styles.link} href='#experience'>experiências</AnchorLink>
+                            <AnchorLink className={styles.link} href='#projects'>projetos</AnchorLink>
+                            <AnchorLink className={styles.link} href='#contact'>contato</AnchorLink>
+                            <a className={`${styles.curriculum} flex items-center rounded-lg text-sm px-4 py-2`} href="/curriculo.pdf" target="_blank" rel="noreferrer">
+                                <Document></Document>
+                                <p className="ml-3">currículo</p>
+                            </a>
+                        </div>
+                        <div className="md:hidden flex items-center">
+                            <button 
+                                className={menuActive? `${styles.box} ${styles.active}` : `${styles.box}`} 
+                                onClick={() => setMenuActive(!menuActive)}
+                                type="button">
+                                <div className={styles.hamburguer}></div>
+                            </button>
+                        </div>
+                        
                     </div>
-                    <div className="md:hidden flex items-center">
-                        <button 
-                            className={menuActive? `${styles.box} ${styles.active}` : `${styles.box}`} 
-                            onClick={() => setMenuActive(!menuActive)}
-                            type="button">
-                            <div className={styles.hamburguer}></div>
-                        </button>
-                    </div>
-                    
                 </div>
-            </div>
-        </nav>
+                <div className="noise"></div>
+            </nav>
+            <aside className={menuActive? `${styles.mobile} ${styles.on} backdrop-blur-md` : `${styles.mobile}`}>
+                <div className="flex flex-col gap-3 justify-end text-right m-0 ml-auto relative z-10">
+                    <AnchorLink onClick={() => setMenuActive(!menuActive)} className="text-xl py-2 " href='#about'>sobre</AnchorLink>
+                    <AnchorLink onClick={() => setMenuActive(!menuActive)} className="text-xl py-2 " href='#knowlodge'>conhecimentos</AnchorLink>
+                    <AnchorLink onClick={() => setMenuActive(!menuActive)} className="text-xl py-2 " href='#experience'>experiências</AnchorLink>
+                    <AnchorLink onClick={() => setMenuActive(!menuActive)} className="text-xl py-2 " href='#projects'>projetos</AnchorLink>
+                    <AnchorLink onClick={() => setMenuActive(!menuActive)} className="text-xl py-2 " href='#contact'>contato</AnchorLink>
+                    <a className={`${styles.curriculum} flex items-center text-sm px-4 py-3 justify-center mt-10 rounded-lg`} href="/curriculo.pdf" target="_blank" rel="noreferrer">
+                        <Document></Document>
+                        <p className="ml-3">currículo</p>
+                    </a>
+                </div>
+                <div className="noise"></div>
+            </aside>
+        </>
     )
 }
