@@ -1,8 +1,7 @@
 @import './colors.module.scss';
 
 .box{
-    @apply relative rounded-2xl py-20 overflow-hidden z-10;
-    background: $background-color;
+    background: transparentize($primary-color, 0.98);
     &::before{
         content: '';
         position: absolute;
@@ -32,14 +31,13 @@
 }
 
 .technology{
-    @apply rounded-lg py-3 px-6 w-max flex items-center justify-center;
+    @apply rounded-lg md:py-3 py-2 md:px-6 px-4 w-max flex items-center justify-center ;
     border: 1px solid transparentize($primary-color, 0.9);
     z-index: 2;
     background-color: transparentize($background-color, $amount: 0.2);
     cursor: pointer;
     transition: 250ms;
     &:hover{
-        transform: scale(1.2);
         z-index: 3;
         box-shadow: transparentize($primary-color, 0.9) 0px 5px 45px -10px;
         p{
@@ -47,7 +45,7 @@
         }
     }
     p{
-        @apply ml-3 mt-0 text-base text-white text-secondary;
+        @apply ml-3 mt-0 text-white text-secondary md:text-base text-sm;
     }
 }
 

@@ -6,7 +6,6 @@
 
 html,
 body {
-  overflow-x: hidden;
   padding: 0;
   margin: 0;
   color: $primary-text-color;
@@ -33,7 +32,12 @@ a {
   background: $primary-color;
 }
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
+  height: 4px;
+  &:hover{
+    width: 8px;
+  }
+
 }
 ::-webkit-scrollbar-track {
   background: $tertiary-text-color;
@@ -41,6 +45,9 @@ a {
 ::-webkit-scrollbar-thumb {
   border-radius: 2px;
   background: $primary-color;
+  &:horizontal{
+    background-color: $tertiary-text-color;
+  }
 }
 ::-webkit-scrollbar-thumb:hover {
   background: transparentize($primary-color, $amount: 0.3);
@@ -50,10 +57,23 @@ a {
   background: $primary-color;
 }
 
+
+
 .button{
-  @apply bg-primary font-semibold py-3 px-6 rounded-md text-black;
+  @apply font-semibold py-3 px-6 rounded-md text-black flex items-center justify-center;
+  background-color: $primary-color;
+  width: max-content;
+  text-align: center;
   svg{
     stroke: $background-color;
+    margin-right: 0.75em;
+  }
+  transition: all 0.2s ease-in-out;
+
+  &:hover{
+    background-color: transparentize($primary-color, 0.3);
+    transform: scale(0.95) !important;
+
   }
 }
 
@@ -66,13 +86,11 @@ a {
   color: $background-color;
   bottom: -0.5em;
   position: relative;
-  
 }
 
 .line{
   height: 1px;
-  background-image: linear-gradient(to right, #00FFB2 0%, #0000 66%);
-  margin: 0 auto;
+  background-image: linear-gradient(to right, #00FFB2 0%, #0000 95%);
 }
 
 .invert-side{
@@ -88,4 +106,17 @@ a {
   background-image: url('/noise.png');
   z-index: 1;
   opacity: 0.1;
+}
+
+
+@media screen and (max-width: 768px) {
+  .section-title{
+    display: none;
+  }
+  .title{
+    svg{
+      width: 20px;
+      height: 20px;
+    }
+  }
 }

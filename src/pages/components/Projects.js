@@ -2,7 +2,7 @@ import Mouse from "./icons/mouse";
 import { useEffect, useState } from "react";
 import { Octokit } from "octokit";
 import styles from "../../../styles/Projects.module.scss";
-import GithubFill from "./icons/github-fill";
+import Github from "./icons/github";
 import Link from "./icons/link";
 
 export default function Projects() {
@@ -18,6 +18,7 @@ export default function Projects() {
             const res = await fetch(`https://api.github.com/users/igorxaviers/repos`);
             let data = await res.json();
             data = data.filter((project) => project.description !== null);
+            data.sort((a,b) => a.pushed_at > b.pushed_at );
             setProjects(data);
             console.log(data);
         } catch (err) {
@@ -26,27 +27,32 @@ export default function Projects() {
     };
 
     return (
-        <section className="mt-64 mx-auto md:max-w-6xl px-4 sm:px-6 lg:px-8 relative">
+        <section className="mt-64 relative">
             <h2 className="section-title">PROJETOS</h2>
-            <div className="mt-20 grid grid-cols-3 items-center">
-                <div className="flex items-center">
+
+
+            <div className="mt-20 mb-10 flex items-center">
+                <div className="flex items-center title">
                     <Mouse/>
-                    <h2 className="ml-4 text-2xl font-semibold">projetos desenvolvidos</h2>
+                    <h2 className="ml-4 md:text-2xl text-lg w-max font-semibold">projetos desenvolvidos</h2>
                 </div>
-                <div className="line col-span-2 w-full"></div>
+                <div className="line ml-6 w-full"></div>
             </div>
-            <div className="px-4 grid md:grid-cols-2 md:gap-4">
+
+
+            <div className="md:px-4 px-0 grid md:grid-cols-2 md:gap-4">
                 {
                 projects.map((project, index) => (
-                    <div className={`${styles.project} md:mt-10 mt-4 overflow-hidden relative px-8 py-6 rounded-2xl`} key={index}>
+                    <div className={`${styles.project} md:mt-10 mt-4 overflow-hidden relative md:px-8 px-5 py-6 rounded-2xl`} key={index}>
                         <div className="md:flex-row justify-between items-center w-full relative z-10">
                             <div className="">
                                 <div className="flex flex-row items-center">
                                     <h3 className="font-bold text-xl">{project.name}</h3>
                                 </div>
+
                                 <div className="flex flex-row mt-4">
                                     <a href={project.html_url} className="rounded-full bg-dark p-2 mr-2" target="_blank" rel="noreferrer">
-                                        <GithubFill/>
+                                        <Github/>
                                     </a>
                                     <a href={project.homepage} className="rounded-full bg-dark p-2" target="_blank" rel="noreferrer">
                                         <Link/>
@@ -73,7 +79,12 @@ export default function Projects() {
                 }
             </div>
             
-            <a className="button mt-10 max-w-max flex items-center mx-auto" href=""><GithubFill/> <span className="ml-2">Veja todos</span></a>
+            <a 
+            className="button mt-10 max-w-max flex items-center mx-auto" 
+            href="https://github.com/igorxaviers?tab=repositories"
+            target="_blank">
+                <Github/> <span className="ml-2">Veja todos</span>
+            </a>
         </section>
     );
 }

@@ -42,24 +42,6 @@
     animation: gradient 7s ease infinite;
 }
 
-@keyframes gradient{
-    0%{
-        background-position: 0% 50%;
-        transform: rotate(0deg) scale(0.5);
-    }
-    50%{
-        background-position: 150% 50%;
-        transform: rotate(0deg) scale(1.2);
-    }
-    100%{
-        background-position: 0% 50%;
-        transform: rotate(360deg);
-        transform: rotate(0deg) scale(0.5);
-
-    }
-}
-
-//animation rotate
 @keyframes rotate{
     0%{
         transform: rotate(0deg);
@@ -68,10 +50,18 @@
         transform: rotate(360deg);
     }
 }
+
 // gradient text
 .front{
-    background: -webkit-linear-gradient(95deg, $secondary-color -50%, $primary-color 65%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradient 7s ease infinite;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        background: -webkit-linear-gradient(95deg, #6100FF -88%, #00FFB2 102%);
+        opacity: 0.4;
+        border-radius: 2px;
+    }
 }

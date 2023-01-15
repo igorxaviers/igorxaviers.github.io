@@ -2,6 +2,7 @@ import styles from "../../../styles/Header.module.scss";
 import { gsap } from "gsap";
 import { useEffect } from "react";
 import Arrow from "./icons/arrow";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export default function Header() {
     useEffect(() => {
@@ -32,15 +33,15 @@ export default function Header() {
 
 
     return ( 
-        <div className="mx-auto md:max-w-6xl px-4 sm:px-6 lg:px-8 mt-36 relative">
-            <h5 className={styles.introduction}>Olá, meu nome é</h5>
-            <h1 className={styles.name}>Igor Xavier</h1>
-            <h5 className={styles.function}>e eu sou um desenvolvedor <span className={styles.front}>front-end</span></h5>
-            <p className={`${styles.description} max-w-2xl mt-8`}>
+        <div className="mx-auto md:max-w-6xl mt-20 relative">
+            <h5 className="text-tertiary text-lg">Olá, meu nome é</h5>
+            <h1 className="md:text-7xl text-5xl font-bold mt-5">Igor Xavier</h1>
+            <h5 className="md:text-5xl text-3xl font-bold text-secondary mt-2">sou um desenvolvedor <span className={styles.front}>front-end</span></h5>
+            <p className="text-secondary leading-relaxed max-w-2xl mt-8 md:text-base text-sm">
                 Especializado em desenvolvimento de aplicações front end (ocasionalmente também criando designs) de qualidade, 
                 visando performace, modernas, responsivas, com um bom SEO e pensando na usabilidade das pessoas.
             </p>
-            <button className="button mt-10 flex items-center"><Arrow/> <span className="ml-3">Mais sobre mim</span></button>
+            <AnchorLink className="button mt-10 ml-0" href='#about'><Arrow/> Mais sobre mim</AnchorLink>
             {/* <div className={styles.sphere}></div> */}
         </div>
     );

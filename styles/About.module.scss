@@ -14,8 +14,19 @@
 
 .imgBox{
     position: relative;
-    height: 290px;
-    width: 200px;
+    height: 280px;
+    width: 280px;
+    &:hover{
+        .img{
+            filter: grayscale(0%) contrast(1.1) brightness(1);
+            transform: translate(10px, -10px);
+        }
+        .imgGlass{
+            top: 30px;
+            opacity: 0.4;
+            filter: grayscale(0%) contrast(1.1) brightness(1.5) blur(35px);
+        }
+    }
 }
 
 .img{
@@ -23,18 +34,19 @@
     position: relative;
     object-fit: cover;
     border-radius: 14px;
+    transition: all 0.1s ease-in-out;
     z-index: 2;
 }
 
 .imgGlass{
+    border-radius: 14px;
+    transition: all 0.1s ease-in-out;
     position: absolute;
-    top: 50px;
+    top: 40px;
     left: 10px;
-    height: 230px;
-    width: 150px;
-    opacity: 0.5;
+    opacity: 0.6;
     z-index: 1;
-    filter: blur(30px);
+    filter: grayscale(100%) contrast(1.1) brightness(0.6) blur(30px);
 }
 
 .xBox{
@@ -46,16 +58,15 @@
     justify-content: center;
 }
 .x{
-    -webkit-text-stroke: 0.5px $primary-color;
+    -webkit-text-stroke: 0.3px $primary-color;
     color: transparent;
-    font-size: 2.5em;
+    font-size: 3.5em;
     font-weight: 700;
 }
 
 .delay3{animation-delay: -4s !important; }
 .delay7{animation-delay: -8s !important;}
 .delay11{animation-delay: -12s !important;}
-.delay15{animation-delay: -12s !important;}
 .animate{animation: animate-forms 16s cubic-bezier(0, 0, 0, 0) infinite;}
 
 
@@ -95,8 +106,6 @@
             left: 0;
             position: absolute;
             color: $primary-color;
-            top: 50%;
-            transform: translateY(-50%);
         }
     }
 }
