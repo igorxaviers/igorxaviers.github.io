@@ -29,9 +29,6 @@ export default function Projects() {
                 }
             }
         );
-
-    
-    
     },[]);
 
     const callAPI = async () => {
@@ -41,7 +38,6 @@ export default function Projects() {
             data = data.filter((project) => project.description !== null);
             data.sort((a,b) => a.pushed_at > b.pushed_at );
             setProjects(data);
-            console.log(data);
         } catch (err) {
           console.log(err);
         }
