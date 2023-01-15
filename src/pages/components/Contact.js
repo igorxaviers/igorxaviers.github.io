@@ -1,6 +1,7 @@
-import styles from '../../../styles/Contact.module.scss'
-import Mail from './icons/Mail'
-import Image from 'next/image'
+import styles from "../../../styles/Contact.module.scss"
+import Mail from "./icons/mail"
+import Image from "next/image"
+import bgContact from "../../../public/bg-contact.webp"
 
 export default function Contact() {
     return (
@@ -19,8 +20,8 @@ export default function Contact() {
                 </p>
                 <a className="button mt-20 mx-auto" href="mailto:igorxavier.ixds@gmail.com"> <Mail/> Fale comigo!</a>
             </div>
-            <Image className={styles.bg} width={0} height={0} alt="background polygons"  src="/bg-contact.png"/>
-            <Image className={`${styles.bgRight} md:block hidden`} width={0} height={0} alt="background polygons" src="/bg-contact.png"/>
+            <Image priority={0} className={styles.bg} alt="background polygons"  src={bgContact}/>
+            <Image priority={0} className={`${styles.bgRight} md:block hidden`} alt="background polygons" src={bgContact}/>
         </section>
     )
 }

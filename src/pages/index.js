@@ -27,7 +27,7 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar/>
-      <div className="overflow-hidden pb-10 w-full">
+      <main className="overflow-hidden pb-10 w-full">
         <div className="md:mt-48 mt-24 mx-auto xl:max-w-6xl lg:max-w-5xl md:max-w-3xl md:px-4 px-6 w-full sm:px-6 lg:px-8 relative">
           <Header/>
           <About/>
@@ -36,7 +36,7 @@ export default function Home() {
           <Projects/>
         </div>
         <Contact/>
-      </div>
+      </main>
       <Footer/>
     </>
   )

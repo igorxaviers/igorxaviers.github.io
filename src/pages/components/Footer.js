@@ -1,12 +1,12 @@
-import Linkedin from "./icons/Linkedin"
-import Instagram from "./icons/Instagram"
-import Github from "./icons/Github"
+import Linkedin from "./icons/linkedin"
+import Instagram from "./icons/instagram"
+import Github from "./icons/github"
 
 
 export default function Footer() {
     return(
         <footer className="py-8 text-center">
-            <div className="fixed md:flex flex-col hidden left-10 justify-center">
+            <div className="fixed md:flex flex-col hidden bottom-0 left-10 justify-center">
                 <a className="mt-8 hover:-translate-y-1 transition-all mx-auto" href="https://www.linkedin.com/in/igorxavierdasilva/" target="_blank" rel="noreferrer">
                     <Linkedin/>
                 </a>
@@ -16,7 +16,7 @@ export default function Footer() {
                 <a className="mt-8 hover:-translate-y-1 transition-all mx-auto mb-10" href="https://github.com/igorxaviers/" target="_blank" rel="noreferrer">
                     <Github/>
                 </a>
-                <div className="h-20 w-px bg-primary mx-auto"></div>
+                <div className="h-20 w-px bg-light mx-auto"></div>
             </div>
             <div className="md:hidden flex justify-center mb-8">
                 <a className="mx-2" href="https://www.linkedin.com/in/igorxavierdasilva/" target="_blank" rel="noreferrer">

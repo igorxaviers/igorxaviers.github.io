@@ -27,7 +27,7 @@ export default function Projects() {
     };
 
     return (
-        <section className="mt-64 relative">
+        <section id="projects" className="mt-64 relative">
             <h2 className="section-title">PROJETOS</h2>
 
 

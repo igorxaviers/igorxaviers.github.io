@@ -54,8 +54,8 @@ export default function About() {
 
                 <div className="md:col-span-1 md:mt-0 mt-20">
                     <div className={`${styles.imgBox} mx-auto`}>
-                        <Image className={styles.img} src={me} alt="Picture of the author"/>
-                        <Image className={styles.imgGlass} src={me} alt="Picture of the author"/>
+                        <Image className={styles.img} src={me} alt="Foto de Igor Xavier"/>
+                        <Image className={styles.imgGlass} src={me} alt="Foto desfocada de Igor Xavier"/>
                         <div className={styles.squareImg}>
                             <div className={`${styles.xBox} ${styles.animate} ${styles.delay3}`}>
                                 <div className={styles.x}>x</div>

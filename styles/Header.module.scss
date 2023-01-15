@@ -2,28 +2,20 @@
 
 
 .introduction{
-    font-size: 1.2em;
-    color: $primary-color;
+    opacity: 0;
 }
 
 .name{
-    color: $primary-text-color;
-    font-size: 5em;
-    font-weight: 700;
-    line-height: 1.5em;
+    opacity: 0;
 }
 
 .function{
-    color: $secondary-text-color;
-    font-size: 3em;
-    font-weight: 700;
+    opacity: 0;
 }
 
 .description{
-    color: $secondary-text-color;
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.8em;
+
+    opacity: 0;
 }
 
 .sphere{

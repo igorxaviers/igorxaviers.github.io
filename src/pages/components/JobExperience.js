@@ -41,7 +41,7 @@ export default function JobExperience() {
 
 
     return (
-        <section className="mt-64 relative">
+        <section id="experience" className="mt-64 relative">
             <h2 className="section-title">EXPERIÊNCIAS</h2>
 
 

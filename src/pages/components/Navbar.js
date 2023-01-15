@@ -51,8 +51,8 @@ export default function Navbar() {
                     <div className="md:flex hidden space-x-3 items-center">
                         <AnchorLink className={styles.link} href='#about'>sobre</AnchorLink>
                         <AnchorLink className={styles.link} href='#knowlodge'>conhecimentos</AnchorLink>
-                        <AnchorLink className={styles.link} href='#project'>projetos</AnchorLink>
                         <AnchorLink className={styles.link} href='#experience'>experiências</AnchorLink>
+                        <AnchorLink className={styles.link} href='#projects'>projetos</AnchorLink>
                         <AnchorLink className={styles.link} href='#contact'>contato</AnchorLink>
                         <a className={`${styles.curriculum} flex items-center`} href="/curriculo.pdf" target="_blank" rel="noreferrer">
                             <Document></Document>

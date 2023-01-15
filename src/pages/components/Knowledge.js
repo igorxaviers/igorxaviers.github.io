@@ -18,7 +18,7 @@ import Triangle from './icons/triangle';
 
 export default function Knowledge(){
     return(
-        <section id="knowlodge" className="mt-64 relative">
+        <section id="knowlodge" className="mt-64 md:pt-20 relative">
             <div className={`${styles.box} relative rounded-2xl md:py-20 py-10 overflow-hidden z-10`}>
                 <div className="md:grid grid-cols-4 items-center relative z-10">
                     <div className="md:block hidden line w-full left-0 relative"></div>
