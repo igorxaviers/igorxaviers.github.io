@@ -82,7 +82,7 @@ export default function Projects() {
             <a 
             className="button mt-10 max-w-max flex items-center mx-auto" 
             href="https://github.com/igorxaviers?tab=repositories"
-            target="_blank">
+            target="_blank" rel="noreferrer">
                 <Github/> <span className="ml-2">Veja todos</span>
             </a>
         </section>

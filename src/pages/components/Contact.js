@@ -1,5 +1,6 @@
 import styles from '../../../styles/Contact.module.scss'
 import Mail from './icons/Mail'
+import Image from 'next/image'
 
 export default function Contact() {
     return (
@@ -12,14 +13,14 @@ export default function Contact() {
                     Estou aberto a parcerias, projetos, <span className="text-primary">oportunidades de trabalho</span> ou até algo mais, estou sempre aberto! Pode entrar em 
                     contato comigo por 
                     <a className="hover:text-tertiary hover:underline ml-2" href="mailto:igorxavier.ixds@gmail.com">email</a>,
-                    <a className="hover:text-tertiary hover:underline mx-2" href="https://www.linkedin.com/in/igorxavierdasilva/" target="_blank">linkedin</a> 
+                    <a className="hover:text-tertiary hover:underline mx-2" href="https://www.linkedin.com/in/igorxavierdasilva/" target="_blank" rel="noreferrer">linkedin</a> 
                     ou 
-                    <a className="hover:text-tertiary hover:underline ml-2" href="https://www.instagram.com/igorxavi_/" target="_blank">instagram</a>
+                    <a className="hover:text-tertiary hover:underline ml-2" href="https://www.instagram.com/igorxavi_/" target="_blank" rel="noreferrer">instagram</a>
                 </p>
                 <a className="button mt-20 mx-auto" href="mailto:igorxavier.ixds@gmail.com"> <Mail/> Fale comigo!</a>
             </div>
-            <img className={styles.bg} src="/bg-contact.png"/>
-            <img className={`${styles.bgRight} md:block hidden`} src="/bg-contact.png"/>
+            <Image className={styles.bg} width={0} height={0} alt="background polygons"  src="/bg-contact.png"/>
+            <Image className={`${styles.bgRight} md:block hidden`} width={0} height={0} alt="background polygons" src="/bg-contact.png"/>
         </section>
     )
 }

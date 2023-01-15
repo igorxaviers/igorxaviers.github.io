@@ -4,6 +4,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import styles from "../../../styles/Navbar.module.scss";
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
+import Link from "next/link";	
 
 
 
@@ -42,18 +43,18 @@ export default function Navbar() {
             <div className="md:px-12 mx-auto">
                 <div className="flex justify-between">
                     {/* <Logo></Logo> */}
-                    <a href="/" className={`flex items-center ${styles.logo}`}>
+                    <Link href="/" className={`flex items-center ${styles.logo}`}>
                         <span className="igor">Igor</span>
                         <span className={`text-tertiary text-5xl font-bold ${styles.logoX}`}>X</span>
                         <span className="xavier">avier</span>
-                    </a>
+                    </Link>
                     <div className="md:flex hidden space-x-3 items-center">
                         <AnchorLink className={styles.link} href='#about'>sobre</AnchorLink>
                         <AnchorLink className={styles.link} href='#knowlodge'>conhecimentos</AnchorLink>
                         <AnchorLink className={styles.link} href='#project'>projetos</AnchorLink>
                         <AnchorLink className={styles.link} href='#experience'>experiências</AnchorLink>
                         <AnchorLink className={styles.link} href='#contact'>contato</AnchorLink>
-                        <a className={`${styles.curriculum} flex items-center`} href="/curriculo.pdf" target="_blank">
+                        <a className={`${styles.curriculum} flex items-center`} href="/curriculo.pdf" target="_blank" rel="noreferrer">
                             <Document></Document>
                             <p className="ml-3">currículo</p>
                         </a>
