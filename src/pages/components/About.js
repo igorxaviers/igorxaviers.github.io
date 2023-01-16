@@ -63,13 +63,13 @@ export default function About() {
                 <div className="md:col-span-2">
                     <p className=" text-secondary leading-relaxed">
                         Meu nome é Igor Xavier e eu adoro desenvolver para a internet 👨🏽‍💻. Me apaixonei desde o meu primeiro contato com as 
-                        tecnologias web 🕸️ em 2017 e desde então venho sempre estudando coisas.
-                        Meus primeiros projetos foram com HTML e CSS puro criando e recriando sites existentes (como a página do Google 😄)
+                        tecnologias web 🕸️ em 2017 e desde então venho sempre estudando tecnologias que possam agregar nos meus projetos e ambições profissionais.
+                        Os meus primeiros projetos foram construídos com HTML5 e CSS3 puro criando e recriando sites existentes (como a página do Google 😄).
                     </p>
                     <p className="mt-4 text-secondary leading-relaxed">
-                        Especializado em Front end, já atuei desde a
-                        prototipação, design até o desenvolvimento de aplicações simples e escaláveis, aplicando boas práticas
-                        de UI/UX e utilizando linguagens de programações modernas
+                        Especializado em Front-end e sempre buscando me aperfeiçoar, já atuei desde a
+                        prototipação, design até o desenvolvimento de aplicações simples e escaláveis, prezando pelas boas práticas 
+                        de UI/UX e utilizando linguagens de programações modernas.
                     </p>
                     <p className="mt-4 text-secondary leading-relaxed mb-4">
                         Atualmente estou aprofundando meus conhecimentos em:

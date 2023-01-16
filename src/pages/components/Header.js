@@ -59,8 +59,8 @@ export default function Header() {
             <h1 className={`${styles.name} md:text-7xl text-5xl font-bold mt-5`}>Igor Xavier</h1>
             <h5 className={`${styles.function} md:text-6xl text-3xl font-bold text-secondary mt-2`}>Sou um desenvolvedor <span className={styles.front}>front-end</span></h5>
             <p className={`${styles.description} text-secondary leading-loose max-w-2xl mt-8 md:text-base text-sm`}>
-                Especializado em desenvolvimento de aplicações front end (ocasionalmente também criando designs) de qualidade, 
-                visando performace, modernas, responsivas, com um bom SEO & UI/UX.
+                Especializado em desenvolvimento de aplicações front-end (ocasionalmente também criando designs) modernas, responsivas, 
+                de alta performace, acessíveis, com um bom SEO & UI/UX.
             </p>
             <AnchorLink className="button mt-20 ml-0" href='#about'><Arrow/> Mais sobre mim</AnchorLink>
             <span className={styles.x} ref={ref}>X</span>
