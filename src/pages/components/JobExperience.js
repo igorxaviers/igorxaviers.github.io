@@ -83,7 +83,7 @@ export default function JobExperience() {
             <div className="mt-20 flex items-center">
                 <div className="flex items-center title">
                     <Experience/>
-                    <h2 className="min-w-max ml-4 md:text-2xl text-lg font-semibold">experiência de trabalho</h2>
+                    <h3 className="min-w-max ml-4 md:text-2xl text-lg font-semibold">experiência de trabalho</h3>
                 </div>
                 <div className="line ml-6 w-full"></div>
             </div>

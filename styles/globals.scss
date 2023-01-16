@@ -32,12 +32,8 @@ a {
   background: $primary-color;
 }
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 6px;
   height: 4px;
-  &:hover{
-    width: 8px;
-  }
-
 }
 ::-webkit-scrollbar-track {
   background: $tertiary-text-color;

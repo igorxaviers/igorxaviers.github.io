@@ -48,12 +48,10 @@ export default function About() {
     return ( 
         <section id="about" className="mt-64 relative">
             <h2 className="section-title mt-60"  ref={ref}>SOBRE</h2>
-
-
             <div className="mt-20 flex items-center">
                 <div className="title flex items-center">
                     <User/>
-                    <h2 className="min-w-max md:ml-4 ml-2 md:text-2xl text-lg font-semibold">sobre mim</h2>
+                    <h3 className="min-w-max md:ml-4 ml-2 md:text-2xl text-lg font-semibold">sobre mim</h3>
                 </div>
                 <div className="line ml-6 w-full"></div>
             </div>    

@@ -51,7 +51,7 @@ export default function Projects() {
             <div className="mt-20 mb-10 flex items-center">
                 <div className="flex items-center title">
                     <Mouse/>
-                    <h2 className="ml-4 md:text-2xl text-lg w-max font-semibold">projetos desenvolvidos</h2>
+                    <h3 className="ml-4 md:text-2xl text-lg w-max font-semibold">projetos desenvolvidos</h3>
                 </div>
                 <div className="line ml-6 w-full"></div>
             </div>
