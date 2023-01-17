@@ -68,12 +68,13 @@ export default function Projects() {
                                 </div>
 
                                 <div className="flex flex-row mt-4">
-                                    <a href={project.html_url} className="rounded-full bg-dark p-2 mr-2" target="_blank" rel="noreferrer">
+                                    <a href={project.html_url} aria-label="github" className="rounded-full bg-dark p-2 mr-2" target="_blank" rel="noreferrer">
                                         <Github/>
                                     </a>
-                                    <a href={project.homepage} className="rounded-full bg-dark p-2" target="_blank" rel="noreferrer">
-                                        <Link/>
-                                    </a>
+                                    {
+                                        project.homepage != null && project.homepage != "" ? <a href={project.homepage} aria-label="link" className="rounded-full bg-dark p-2" target="_blank" rel="noreferrer"><Link/></a>
+                                        : null
+                                    }
                                 </div>
 
                                 <p className="my-6 bg-dark text-sm leading-loose rounded-md px-4 py-4 relative z-10 max-w-full ">{project.description}</p>

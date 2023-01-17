@@ -57,11 +57,11 @@ export default function Header() {
         <header className="mx-auto md:max-w-6xl mt-20 relative">
             <h2 className={`${styles.introduction} text-tertiary text-lg`}>Olá, meu nome é</h2>
             <h1 className={`${styles.name} md:text-7xl text-5xl font-bold mt-5`}>Igor Xavier</h1>
-            <h3 className={`${styles.function} md:text-6xl text-3xl font-bold text-secondary mt-2`}>sou um desenvolvedor <span className={styles.front}>front-end</span></h3>
-            <h4 className={`${styles.description} text-secondary leading-loose max-w-2xl mt-8 md:text-base text-sm`}>
+            <h2 className={`${styles.function} md:text-6xl text-3xl font-bold text-secondary mt-2`}>sou um desenvolvedor <span className={styles.front}>front-end</span></h2>
+            <h3 className={`${styles.description} text-secondary leading-loose max-w-2xl mt-8 md:text-base text-sm`}>
                 Especializado em desenvolvimento de aplicações front-end (ocasionalmente também criando designs) modernas, responsivas, 
                 de alta performace, acessíveis, com um bom SEO & UI/UX.
-            </h4>
+            </h3>
             <AnchorLink className="button mt-20 ml-0" href='#about'><Arrow/> Mais sobre mim</AnchorLink>
             <span className={styles.x} ref={ref}>X</span>
             <div className={styles.sphere}></div>
