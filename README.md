@@ -1,6 +1,8 @@
 # 👨🏽‍💻My portfólio - Igor Xavier
 
 You can see it at: <a href="https://igorxavie.me/" target="_blank">https://igorxavie.me/</a>
+![print-igorxavie](https://user-images.githubusercontent.com/70658593/213037936-477096fe-7b2a-4d00-8a29-0c79c5d1e207.png)
+
 
 This project will be continuosly update when necessary, to update info, add more sections, or give a some little improvments.
 For now, it contains these sections:
