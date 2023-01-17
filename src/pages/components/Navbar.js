@@ -64,7 +64,8 @@ export default function Navbar() {
                             <button 
                                 className={menuActive? `${styles.box} ${styles.active}` : `${styles.box}`} 
                                 onClick={() => setMenuActive(!menuActive)}
-                                type="button">
+                                type="button"
+                                aria-label="hamburguer menu">
                                 <div className={styles.hamburguer}></div>
                             </button>
                         </div>
