@@ -24,7 +24,7 @@ export default function Home() {
         <Head>
             <title>Igor Xavier - Desenvolvedor Front-end</title>
 
-            <meta name="keywords" content="Desenvolvedor Front-end, Desenvolvedor, Front-end, Igor Xavier, Portfólio"/>
+            <meta name="keywords" content="Igor Xavier, Desenvolvedor Front-end, Desenvolvedor, Front-end, Portfólio, SEO, UI/UX"/>
             <meta name="author" content="Igor Xavier"/>
             <meta name="language" content="pt-br"/>
             <meta name="revisit-after" content="7 days"/>
@@ -47,20 +47,20 @@ export default function Home() {
             <meta name="msapplication-TileColor" content={backgroundColor} />
 
             <meta name="title" content="Igor Xavier - Desenvolvedor Front-end"/>
-            <meta name="description" content="Especializado em desenvolvimento de aplicações front end (ocasionalmente também criando designs) de qualidade, 
+            <meta name="description" content="Sou Igor Xavier, especializado em desenvolvimento de aplicações front-end (ocasionalmente também criando designs) de qualidade, 
             visando performace, modernas, responsivas, com um bom SEO & UI/UX."/>
 
             <meta property="og:type" content="website"/>
             <meta property="og:url" content="https://igorxavie.me/"/>
             <meta property="og:title" content="Igor Xavier - Desenvolvedor Front-end"/>
-            <meta property="og:description" content="Especializado em desenvolvimento de aplicações front end (ocasionalmente também criando designs) de qualidade, 
+            <meta property="og:description" content="Sou Igor Xavier, especializado em desenvolvimento de aplicações front-end (ocasionalmente também criando designs) de qualidade, 
             visando performace, modernas, responsivas, com um bom SEO & UI/UX."/>
             <meta property="og:image" content="https://igorxavie.me/meta.png"/>
 
             <meta property="twitter:card" content="summary_large_image"/>
             <meta property="twitter:url" content="https://igorxavie.me/"/>
             <meta property="twitter:title" content="Igor Xavier - Desenvolvedor Front-end"/>
-            <meta property="twitter:description" content="Especializado em desenvolvimento de aplicações front end (ocasionalmente também criando designs) de qualidade, 
+            <meta property="twitter:description" content="Sou Igor Xavier, especializado em desenvolvimento de aplicações front-end (ocasionalmente também criando designs) de qualidade, 
             visando performace, modernas, responsivas, com um bom SEO & UI/UX."/>
             <meta property="twitter:image" content="https://igorxavie.me/meta.png"/>
         </Head>

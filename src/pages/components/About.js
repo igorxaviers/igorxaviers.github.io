@@ -64,6 +64,12 @@ export default function About() {
                         tecnologias web 🕸️ em 2017 e desde então venho sempre estudando tecnologias que possam agregar nos meus projetos e ambições profissionais.
                         Os meus primeiros projetos foram construídos com HTML5 e CSS3 puro criando e recriando sites existentes (como a página do Google 😄).
                     </p>
+
+                    <p className="mt-4 text-secondary leading-relaxed">
+                        Tenho 22 anos, sou formado em Bacharel em Sistemas de Informação pela Unoeste (2019-2022), cursei Técnico em Informática no Senac (2017-2018)
+                        e fiz curso de língua inglesa na Microcamp (2014-2016).
+                    </p>
+
                     <p className="mt-4 text-secondary leading-relaxed">
                         Especializado em Front-end e sempre buscando me aperfeiçoar, já atuei desde a
                         prototipação, design até o desenvolvimento de aplicações simples e escaláveis, prezando pelas boas práticas 
