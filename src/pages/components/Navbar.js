@@ -40,7 +40,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className={`${styles.bar} md:py-5 py-3 px-6 md:px-0 backdrop-blur-md z-50`}>
+            <nav className={`${styles.bar} md:py-3 py-2 px-6 md:px-0 backdrop-blur-md z-50`}>
                 <div className="md:px-12 mx-auto">
                     <div className="flex justify-between relative  z-30">
                         {/* <Logo></Logo> */}
@@ -55,11 +55,11 @@ export default function Navbar() {
                             <AnchorLink className={styles.link} href='#experience'>experiências</AnchorLink>
                             <AnchorLink className={styles.link} href='#projects'>projetos</AnchorLink>
                             <AnchorLink className={styles.link} href='#contact'>contato</AnchorLink>
-                            <a className={`${styles.curriculum} flex items-center rounded-lg text-sm px-4 py-2`} href="/curriculo.pdf" target="_blank" rel="noreferrer">
-                                <Document></Document>
-                                <p className="ml-3">currículo</p>
-                            </a>
                         </div>
+                        <a className={`${styles.curriculum} flex items-center rounded-lg text-sm px-4 py-2`} href="/curriculo.pdf" target="_blank" rel="noreferrer">
+                            <Document></Document>
+                            <p className="ml-3">currículo</p>
+                        </a>
                         <div className="md:hidden flex items-center">
                             <button 
                                 className={menuActive? `${styles.box} ${styles.active}` : `${styles.box}`} 

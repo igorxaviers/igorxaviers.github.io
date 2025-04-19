@@ -9,15 +9,12 @@ import Knowledge from './components/Knowledge'
 import JobExperience from './components/JobExperience'
 import Projects from './components/Projects'
 
-
 export default function Home() {
-
   const changeMode = () => {
     const body = document.querySelector('body')
     body.classList.toggle('dark')
     localStorage.getItem('color-theme') === 'light' ? localStorage.setItem('color-theme', 'light') : localStorage.setItem('color-theme', 'dark')
   }
-
 
   return (
     <>
