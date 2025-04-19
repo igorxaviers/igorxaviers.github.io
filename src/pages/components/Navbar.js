@@ -49,18 +49,18 @@ export default function Navbar() {
                             <span className={`text-tertiary text-5xl font-bold ${styles.logoX}`}>X</span>
                             <span className="xavier">avier</span>
                         </Link>
-                        <div className="md:flex hidden space-x-3 items-center">
+                        <div className="lg:flex hidden space-x-3 items-center">
                             <AnchorLink className={styles.link} href='#about'>sobre</AnchorLink>
                             <AnchorLink className={styles.link} href='#knowlodge'>conhecimentos</AnchorLink>
                             <AnchorLink className={styles.link} href='#experience'>experiências</AnchorLink>
                             <AnchorLink className={styles.link} href='#projects'>projetos</AnchorLink>
                             <AnchorLink className={styles.link} href='#contact'>contato</AnchorLink>
                         </div>
-                        <a className={`${styles.curriculum} flex items-center rounded-lg text-sm px-4 py-2`} href="/curriculo.pdf" target="_blank" rel="noreferrer">
+                        <a className={`${styles.curriculum} hidden lg:flex items-center rounded-lg text-sm px-4 py-2`} href="/curriculo.pdf" target="_blank" rel="noreferrer">
                             <Document></Document>
                             <p className="ml-3">currículo</p>
                         </a>
-                        <div className="md:hidden flex items-center">
+                        <div className="lg:hidden flex items-center">
                             <button 
                                 className={menuActive? `${styles.box} ${styles.active}` : `${styles.box}`} 
                                 onClick={() => setMenuActive(!menuActive)}
